@@ -1,0 +1,11 @@
+{% extends "tugas/layout.html" %} {% block badan %}
+<h1>Tugas nih WOi</h1>
+<ul>
+  {% for kerja in tugas %}
+  <li>{{ kerja }}</li>
+  {% empty %}
+  <li>Tidak Ada Kerja</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'tambah' %}">link ke halaman tambah tugas</a>
+{% endblock %}

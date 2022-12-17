@@ -1,0 +1,8 @@
+{% extends "tugas/layout.html" %} {% block badan %}
+<h1>Tambah Tugas</h1>
+<form action="{% url 'tambah' %}" method="post">
+  {% csrf_token %} {{ form }}
+  <input type="submit" name="" id="" />
+</form>
+<a href="{% url 'tahunApp' %}">Kembali ke halaman tugas</a>
+{% endblock %}
